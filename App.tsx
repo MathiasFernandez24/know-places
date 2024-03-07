@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { changeAppLanguage, i18n, i18nTranslate } from "./app/i18n";
-import { useEffect, useState } from "react";
 
 export default function App() {
   const [updateLanguage, setUpdateLanguage] = useState(true);

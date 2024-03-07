@@ -29,25 +29,12 @@ export function i18nTranslate(key: TxKeyPath, options?: i18n.TranslateOptions) {
   return key ? i18n.t(key, options) : null;
 }
 
-// type LanguageValue = typeof enabledLanguages;
 type LanguageValue =
   (typeof enabledLanguages)[keyof typeof enabledLanguages]["value"];
-
 export const changeAppLanguage = (language: LanguageValue) => {
   for (const [key, lang] of Object.entries(enabledLanguages)) {
     if (lang.value === language) {
       i18n.locale = lang.key;
-      // console.log(lang.key);
-      // i18n.store(fr);
-      // return lang.key;
-      // loadTranslations(language);
     }
   }
 };
-
-async function loadTranslations(language) {
-  const response = await fetch(`/${language}.json`);
-  const translations = await response.json();
-
-  i18n.store(translations);
-}
