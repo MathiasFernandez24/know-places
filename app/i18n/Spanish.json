@@ -1,0 +1,24 @@
+{
+    "test": {
+       "hello":"Hola"
+        },
+    "common": {
+        "accept": "Aceptar",
+        "cancel": "Cancelar",
+        "confirm": "Confirmar",
+        "exit": "Salir",
+        "ok": "Ok"
+    },
+    "login": {
+        "create": "Crear Cuenta",
+        "name": "Nombre",
+        "email": "Email",
+        "password": "Contraseña",
+        "sign-up": "Registrarse",
+        "sign-in": "Iniciar Sesión",
+        "or": "o",
+        "welcome-back": "Bienvenido de vuelta",
+        "forgot": "¿Has olvidado tu contraseña?",
+        "welcome": "Bienvenido"
+    }
+}

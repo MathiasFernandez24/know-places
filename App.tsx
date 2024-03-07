@@ -1,11 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { Button, StyleSheet, Text, View } from "react-native";
+import { changeAppLanguage, i18n, i18nTranslate } from "./app/i18n";
+import { useEffect, useState } from "react";
 
 export default function App() {
+  const [updateLanguage, setUpdateLanguage] = useState(true);
+  i18n.onChange(() => {
+    setUpdateLanguage(!updateLanguage);
+  });
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
+      <Text>{i18nTranslate("test.hello")}</Text>
+      <Button title="ESPAÑOL" onPress={() => changeAppLanguage("Spanish")} />
+      <Button title="FRANCES" onPress={() => changeAppLanguage("French")} />
+      <Button title="INGLES" onPress={() => changeAppLanguage("English")} />
     </View>
   );
 }
@@ -13,8 +23,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
