@@ -1,4 +1,5 @@
 import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
 interface State {
   languageName: string;
@@ -10,14 +11,22 @@ interface State {
   lessTestNumber: () => void;
 }
 
-export const useStoreSettingsUser = create<State>((set) => ({
-  testNumber: 0,
-  lessTestNumber: () => set((state) => ({ testNumber: state.testNumber - 1 })),
-  moreTestNumber: () => set((state) => ({ testNumber: state.testNumber + 1 })),
-  languageName: "first",
-  languageKey: "",
-  theme: "dark",
-  setLanguage: () => {
-    set({ languageName: "IDIOMA" });
-  },
-}));
+export const useStoreSettingsUser = create<State>()(
+  persist(
+    (set, get) => ({
+      testNumber: 0,
+      lessTestNumber: () => set({ testNumber: get().testNumber - 1 }),
+      moreTestNumber: () => set({ testNumber: get().testNumber + 1 }),
+      languageName: "first",
+      languageKey: "",
+      theme: "dark",
+      setLanguage: () => {
+        set({ languageName: "IDIOMA" });
+      },
+    }),
+    {
+      name: "testMathi-storage", // name of the item in the storage (must be unique)
+      // storage: createJSONStorage(() => sessionStorage), // (optional) by default, 'localStorage' is used
+    }
+  )
+);

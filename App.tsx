@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { changeAppLanguage, i18n, i18nTranslate } from "./app/i18n";
 import { useStoreSettingsUser } from "./app/store/useStoreSettingsUser";
@@ -10,6 +10,9 @@ export default function App() {
     setUpdateLanguage(!updateLanguage);
     // setLanguage();
   });
+
+  useEffect(() => {}, []);
+
   const { testNumber, moreTestNumber, lessTestNumber } = useStoreSettingsUser();
   return (
     <View style={styles.container}>
