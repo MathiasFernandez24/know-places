@@ -3,6 +3,11 @@ import { useEffect, useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { changeAppLanguage, i18n, i18nTranslate } from "./app/i18n";
 import { useStoreSettingsUser } from "./app/store/useStoreSettingsUser";
+if (__DEV__) {
+  import("./app/config/ReactotronConfig").then(() =>
+    console.log("Reactotron Configured")
+  );
+}
 
 export default function App() {
   const [updateLanguage, setUpdateLanguage] = useState(true);
@@ -11,9 +16,14 @@ export default function App() {
     // setLanguage();
   });
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetch("https://rickandmortyapi.com/api/character/2");
+    // .then((r) => r.json())
+    // .then((res) => console.log(res));
+  }, []);
 
   const { testNumber, moreTestNumber, lessTestNumber } = useStoreSettingsUser();
+
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
