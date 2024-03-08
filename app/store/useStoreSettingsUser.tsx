@@ -1,5 +1,6 @@
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { create } from "zustand";
-import { persist } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
 
 interface State {
   languageName: string;
@@ -26,6 +27,8 @@ export const useStoreSettingsUser = create<State>()(
     }),
     {
       name: "testMathi-storage", // name of the item in the storage (must be unique)
+      storage: createJSONStorage(() => AsyncStorage),
+      // storage: () => AsyncStorage, // Add this here!
       // storage: createJSONStorage(() => sessionStorage), // (optional) by default, 'localStorage' is used
     }
   )
