@@ -6,7 +6,7 @@ interface State {
   setUserName: (name: string) => void;
 }
 
-export const useUserInfoStore = create<State>((set) => ({
+export const useStoreUserInfo = create<State>((set) => ({
   userName: "",
   age: null,
   setUserName: (name) => {

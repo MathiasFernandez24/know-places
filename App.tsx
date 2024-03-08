@@ -2,7 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { useState } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { changeAppLanguage, i18n, i18nTranslate } from "./app/i18n";
-import { useSettingsUserStore } from "./app/store/useSettingsUserStore";
+import { useStoreSettingsUser } from "./app/store/useStoreSettingsUser";
 
 export default function App() {
   const [updateLanguage, setUpdateLanguage] = useState(true);
@@ -10,12 +10,7 @@ export default function App() {
     setUpdateLanguage(!updateLanguage);
     // setLanguage();
   });
-
-  // const [languageName, setLanguage] = useSettingsUserStore((state) => [
-  //   state.languageName,
-  //   state.setLanguage,
-  // ]);
-
+  const { testNumber, moreTestNumber, lessTestNumber } = useStoreSettingsUser();
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
@@ -29,6 +24,10 @@ export default function App() {
       />
       <Button title="FRANCES" onPress={() => changeAppLanguage("French")} />
       <Button title="INGLES" onPress={() => changeAppLanguage("English")} />
+
+      <Text>{testNumber}</Text>
+      <Button title="    +    " onPress={moreTestNumber} />
+      <Button title="    -    " onPress={lessTestNumber} />
     </View>
   );
 }
@@ -39,5 +38,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
+    gap: 20,
   },
 });
