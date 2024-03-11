@@ -27,6 +27,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
+      <Text>Know places</Text>
       <Text>{i18nTranslate("test.hello")}</Text>
       {/* <Text>{languageName}</Text> */}
       <Button
