@@ -1,24 +1,27 @@
 {
-    "test": {
-       "hello":"Hello"
-    },
-    "common": {
-        "accept": "Accept",
-        "cancel": "Cancel",
-        "confirm": "Confirm",
-        "exit": "Exit",
-        "ok": "Ok"
-    },
-    "login": {
-        "create": "Create Account",
-        "name": "Name",
-        "email": "Email",
-        "password": "Password",
-        "sign-up": "Sign Up",
-        "sign-in": "Sign In",
-        "or": "or",
-        "welcome-back": "Welcome Back",
-        "forgot": "Forgot password?",
-        "welcome": "Welcome"
-    }
+  "home-screen": {
+    "settings": "Settings"
+  },
+  "settings-screen": {
+    "language": "Language"
+  },
+  "common": {
+    "accept": "Accept",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "exit": "Exit",
+    "ok": "Ok"
+  },
+  "login": {
+    "create": "Create Account",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "sign-up": "Sign Up",
+    "sign-in": "Sign In",
+    "or": "or",
+    "welcome-back": "Welcome Back",
+    "forgot": "Forgot password?",
+    "welcome": "Welcome"
+  }
 }

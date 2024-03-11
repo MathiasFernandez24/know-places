@@ -26,7 +26,7 @@ type RecursiveKeyOf<TObj extends Record<string, any>> = {
 
 //translate function
 export function i18nTranslate(key: TxKeyPath, options?: i18n.TranslateOptions) {
-  return key ? i18n.t(key, options) : null;
+  return i18n.t(key, options);
 }
 
 type LanguageValue =
