@@ -1,15 +1,17 @@
-import { StyleSheet, Text as RNText, View } from "react-native";
 import React from "react";
+import { Text as RNText, StyleSheet, TextStyle, ViewStyle } from "react-native";
 
 type props = {
   children: string;
+  style?: ViewStyle | TextStyle;
+  numOfLines?: number;
 };
 const Text = (props: props) => {
-  const { children } = props;
+  const { children, style, numOfLines = undefined } = props;
   return (
-    <View>
-      <RNText>{children}</RNText>
-    </View>
+    <RNText numberOfLines={numOfLines} style={style}>
+      {children}
+    </RNText>
   );
 };
 

@@ -1,14 +1,11 @@
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { NavigationContainer } from "@react-navigation/native";
 import { StatusBar } from "expo-status-bar";
 import { useEffect, useState } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
-import { changeAppLanguage, i18n, i18nTranslate } from "./app/i18n";
-import { useStoreSettingsUser } from "./app/store/useStoreSettingsUser";
-import { NavigationContainer } from "@react-navigation/native";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import Home from "./app/screens/home-screen/Home";
-import Places from "./app/screens/places-screen/Places";
+import { StyleSheet } from "react-native";
+import { i18n } from "./app/i18n";
 import Navigation from "./app/navigation/Navigation";
-import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { useStoreSettingsUser } from "./app/store/useStoreSettingsUser";
 if (__DEV__) {
   import("./app/config/ReactotronConfig").then(() =>
     console.log("Reactotron Configured")

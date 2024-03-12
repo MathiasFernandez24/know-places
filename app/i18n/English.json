@@ -2,8 +2,12 @@
   "home-screen": {
     "settings": "Settings"
   },
-  "settings-screen": {
-    "language": "Language"
+  "modal-settings": {
+    "settings": "Settings",
+    "english": "English",
+    "spanish": "Spanish",
+    "french": "French",
+    "selectLanguage": "Select language"
   },
   "common": {
     "accept": "Accept",

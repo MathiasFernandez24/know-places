@@ -1,6 +1,6 @@
 import { I18n } from "i18n-js";
-import fr from "./French.json";
 import en from "./English.json";
+import fr from "./French.json";
 import es from "./Spanish.json";
 
 export const enabledLanguages = {

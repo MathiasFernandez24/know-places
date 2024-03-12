@@ -1,24 +1,30 @@
 {
-    "test": {
-       "hello":"Salut"
-        },
-    "common": {
-        "accept": "Accepter",
-        "cancel": "Annuler",
-        "confirm": "Confirmer",
-        "exit": "Sortir",
-        "ok": "D'accord"
-    },
-    "login": {
-        "create": "Créer un compte",
-        "name": "Nom",
-        "email": "E-mail",
-        "password": "Mot de passe",
-        "sign-up": "Enregistrement",
-        "sign-in": "Commencer la session",
-        "or": "ou",
-        "welcome-back": "Content de te revoir",
-        "forgot": "Avez-vous oublié votre mot de passe?",
-        "welcome": "Accueillir"
-    }
+  "home-screen": {
+    "settings": "SettingsFR"
+  },
+  "settings-modal": {
+    "settings": "SettingsFR",
+    "english": "EnglishFR",
+    "spanish": "SpanishFR",
+    "french": "FrenchFR"
+  },
+  "common": {
+    "accept": "Accepter",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "exit": "Sortir",
+    "ok": "D'accord"
+  },
+  "login": {
+    "create": "Créer un compte",
+    "name": "Nom",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "sign-up": "Enregistrement",
+    "sign-in": "Commencer la session",
+    "or": "ou",
+    "welcome-back": "Content de te revoir",
+    "forgot": "Avez-vous oublié votre mot de passe?",
+    "welcome": "Accueillir"
+  }
 }
