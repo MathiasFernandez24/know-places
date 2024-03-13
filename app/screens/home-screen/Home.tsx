@@ -5,6 +5,7 @@ import { i18nTranslate } from "../../i18n";
 import ButtonCamera from "./components/ButtonCamera";
 import ButtonSettings from "./components/ButtonSettings";
 import ModalSettings from "./components/ModalSettings";
+import ButtonSave from "./components/ButtonSave";
 
 const Home = () => {
   const [isOpenModalSettings, setIsOpenModalSettings] = useState(false);
@@ -18,6 +19,7 @@ const Home = () => {
         onPress={openModalSettings}
       />
       <ButtonCamera />
+      <ButtonSave isDisabled={true} />
       <ButtonSettings onPress={openModalSettings} />
 
       <ModalSettings

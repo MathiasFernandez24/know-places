@@ -2,6 +2,7 @@ import { AntDesign } from "@expo/vector-icons";
 import React from "react";
 import { Dimensions, StyleSheet, TouchableOpacity } from "react-native";
 import { colors } from "../../../theme/colors";
+import { sizes } from "../../../theme/sizes";
 
 const buttonSize = Dimensions.get("window").width / 3;
 
@@ -23,10 +24,10 @@ const styles = StyleSheet.create({
   container: {
     width: buttonSize,
     height: buttonSize,
-    backgroundColor: colors.primary.white,
+    backgroundColor: colors.white,
     borderRadius: buttonSize,
     position: "absolute",
-    bottom: 0,
+    bottom: sizes.space[5],
     alignSelf: "center",
     alignItems: "center",
     justifyContent: "center",

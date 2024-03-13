@@ -5,19 +5,33 @@ import { colors } from "../../../theme/colors";
 import { sizes } from "../../../theme/sizes";
 
 const buttonSize = Dimensions.get("window").width / 6;
+
 type props = {
   onPress: () => void;
+  isDisabled: boolean;
 };
-const ButtonSettings = (props: props) => {
-  const { onPress } = props;
+
+const ButtonSave = (props: props) => {
+  const { onPress, isDisabled } = props;
   return (
-    <TouchableOpacity style={styles.container} onPress={onPress}>
-      <AntDesign name="setting" size={buttonSize} />
+    <TouchableOpacity
+      style={[
+        styles.container,
+        isDisabled && { backgroundColor: colors.disabled },
+      ]}
+      onPress={onPress}
+      disabled={isDisabled}
+    >
+      <AntDesign
+        name="save"
+        size={buttonSize * 0.9}
+        color={isDisabled ? colors.gray[2] : undefined}
+      />
     </TouchableOpacity>
   );
 };
 
-export default ButtonSettings;
+export default ButtonSave;
 
 const styles = StyleSheet.create({
   container: {
@@ -27,7 +41,7 @@ const styles = StyleSheet.create({
     borderRadius: buttonSize,
     position: "absolute",
     bottom: sizes.space[5],
-    left: buttonSize / 2,
+    right: buttonSize / 2,
     alignItems: "center",
     justifyContent: "center",
     shadowColor: "#000",

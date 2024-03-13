@@ -25,6 +25,7 @@ const MyModal = (props: props) => {
   };
   return (
     <Modal
+      statusBarTranslucent
       transparent
       visible={isOpen}
       animationType="fade"
@@ -50,12 +51,14 @@ const MyModal = (props: props) => {
 export default MyModal;
 
 const styles = StyleSheet.create({
-  background: { flex: 1, padding: 51, backgroundColor: colors.shadow[1] },
+  background: { flex: 1, backgroundColor: colors.shadow[1] },
   container: {
-    backgroundColor: colors.primary.white,
+    backgroundColor: colors.white,
     padding: sizes.space[2],
     borderRadius: sizes.borderRadius[3],
     overflow: "hidden",
+    margin: sizes.space[6] * 2,
+    top: sizes.space[6] * 4,
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
@@ -69,7 +72,7 @@ const styles = StyleSheet.create({
   headercontainer: {
     flexDirection: "row",
     borderBottomWidth: 1,
-    borderColor: colors.primary.gray,
+    borderColor: colors.gray[1],
     paddingBottom: sizes.space[1],
   },
   headerTitle: {
