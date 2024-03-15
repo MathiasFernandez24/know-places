@@ -1,3 +1,5 @@
+import { Dimensions } from "react-native";
+
 type sizes = {
   borderRadius: { 1: number; 2: number; 3: number; 4: number };
   iconSize: { 1: number; 2: number; 3: number; 4: number };

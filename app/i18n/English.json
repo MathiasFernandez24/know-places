@@ -1,6 +1,8 @@
 {
   "home-screen": {
-    "settings": "Settings"
+    "settings": "Settings",
+    "namePlace": "Name of the place...",
+    "detailPlace": "Additional detail of the place..."
   },
   "modal-settings": {
     "settings": "Settings",
